@@ -1,0 +1,20 @@
+<!--components/starlevel/starlevel.wxml-->
+<view class="starts-level-home cl">
+  <view class="fl starts-area div">
+    <view class="cl div">
+      <view class="fl div" wx:for="{{stars}}" wx:for-item="i" wx:key="{{i}}">
+        <image wx:if="{{i<=score/2}}" src="/assets/image/red-con.png" alt="星级"/>
+        <view class="half-start" wx:elif="{{i<(score/2+1)}}">
+          <image  src="/assets/image/nocon.png" alt="星级"/>
+          <view style="position: absolute;top: 0px;left: 0px;width: {{width}}%;overflow: hidden">
+            <image class="half-start-image" src="/assets/image/red-con.png" alt="星级"/>
+          </view>
+        </view>
+        <image wx:else src="/assets/image/nocon.png" alt="星级"/>
+      </view>
+      <view class="fl p">
+        <slot/>
+      </view>
+    </view>
+  </view>
+</view>

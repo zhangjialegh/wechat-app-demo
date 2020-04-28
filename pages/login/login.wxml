@@ -1,0 +1,50 @@
+<!--pages/login/login.wxml-->
+<view class="container">
+  <view class="section">
+    <view class="h2">欢迎来到东丽e家</view>
+    <view class="sign-box">
+      <view class="sign-tab" bindtap="tabChange">
+        <view class="tab-item {{tab===1?'selected':''}}" data-tab="1">快捷登录</view>
+        <view class="tab-item {{tab===2?'selected':''}}" data-tab="2">账号登录</view>
+      </view>
+      <view class="sign-body">
+        <form class="form">
+          <view class="input-wrap" hidden="{{tab===2}}">
+            <view class="label">手机号</view>
+            <view class="input-box">
+              <input value="{{phone}}" type="number" placeholder="请输入手机号" bindinput="handlePhone" />
+            </view>
+            <view class="input-box">
+              <input type="number" placeholder="请输入验证码" maxlength="6" bindinput="handleCode"/>
+              <button plain class="code-btn">获取验证码</button>
+            </view> 
+          </view>
+          <view class="input-wrap" hidden="{{tab===1}}">
+            <view class="label">手机号</view>
+            <view class="input-box">
+              <input type="number" value="{{phone}}" placeholder="请输入手机号" bindinput="handlePhone"/>
+            </view>
+            <view class="label">密码</view>
+            <view class="input-box">
+              <input type="text" password="{{hidePwd}}" placeholder="请输入密码" bindinput="handlePassword"/>
+              <view class="eye-box" bindtap="handleHidePwd">
+                <image src="/assets/image/eye-close.png" mode="aspectFit" hidden="{{!hidePwd}}"/>
+                <image src="/assets/image/eye-open.png" mode="aspectFit" hidden="{{hidePwd}}"/>
+              </view>
+            </view>
+          </view>
+          <view class="submit-btn-box">
+            <button plain class="submit-btn" bindtap="handleSubmit">立即登录</button>
+          </view>
+        </form>
+
+        <view class="btm-box">
+          <!-- <text class="text">暂无账号？</text>
+          <navigator class="navigator" target="" url="/pages/index/index" hover-class="navigator-hover" open-type="navigate">
+            去注册
+          </navigator> -->
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

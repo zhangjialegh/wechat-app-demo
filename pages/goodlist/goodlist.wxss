@@ -1,0 +1,34 @@
+/* pages/detail.wxss */
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+#listview .item {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 30rpx;
+}
+.img-box {
+  width: 140rpx;
+  height: 140rpx;
+  overflow: hidden;
+}
+.img-box > image {
+  height: 100%;
+  width: 100%;
+}
+.right {
+  padding-left: 30rpx;
+}
+.right .name {
+  font-size: 32rpx;
+  color: #000;
+}
+
+.right .address {
+  font-size: 24rpx;
+  color: #666;
+}

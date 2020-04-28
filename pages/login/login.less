@@ -1,0 +1,111 @@
+.container {
+  .section {
+    background-image: url();
+    background-repeat: no-repeat;
+    background-size: 100%;
+    min-height: 100%;
+  }
+  .h2 {
+    font-size: 23px;
+    color: #fff;
+    letter-spacing: 0;
+    padding-top: 50rpx;
+    padding-bottom: 30rpx;
+  }
+  .sign-box {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 15rpx;
+    overflow: hidden;
+    .sign-tab {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .tab-item {
+        flex: 1;
+        padding: 30rpx;
+        text-align: center;
+        background: #66a9f2;
+        color: #fff;
+        opacity: .8;
+        &.selected {
+          color: #666;
+          background: #fff;
+          opacity: 1;
+          border-top-right-radius: 15rpx;
+          border-top-left-radius: 15rpx;
+          overflow: hidden;
+        }
+      }
+    }
+    .sign-body {
+      padding: 30rpx;
+      .form {
+        .label {
+          font-size: 28rpx;
+          color: #999;
+          padding: 30rpx 0 15rpx;
+        }
+        .input-box {
+          position: relative;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          border-bottom: 1rpx solid #eee;
+          padding-top: 15px;
+          input {
+            padding: 20rpx 0;
+            font-size: 30rpx;
+            width: 100%;
+          }
+          .code-btn {
+            border: 1rpx solid #44a1ff;
+            color: #44a1ff;
+            height: 65rpx;
+            width: 200rpx;
+            font-size: 24rpx;
+            line-height: 65rpx;
+          }
+          .eye-box {
+            width: 100rpx;
+            height: 60rpx;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            image {
+              width: 50rpx;
+              height: 100%;
+            }
+          }
+        }
+        .submit-btn-box {
+          padding: 50rpx 0 30rpx;
+          .submit-btn {
+            height: 90rpx;
+            width: 100%;
+            line-height: 90rpx;
+            background-color: #f3f4f6;
+            font-size: 32rpx;
+            border-radius: 45rpx;
+          }
+        }
+      }
+      .btm-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 30rpx 0 40rpx;
+        .text {
+          font-size: 28rpx;
+          color: #999;
+          letter-spacing: .225px;
+        }
+        .navigator {
+          font-size: 30rpx;
+          color: #44a1ff;
+          letter-spacing: .26px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+<!--components/listview/listview.wxml-->
+<view class="lists">
+  <view class='search-wrap' wx:if="{{search}}">
+    <view class="search-box">
+      <text class="iconfont icon-search"></text>
+      <input class="weui-input" confirm-type="search" placeholder="搜索" bindinput="handleInput" bindconfirm="handleConfirm"/>
+    </view>
+  </view>
+  <slot/>
+  <view class='loading-box' wx:if="{{lists.length}}">
+    <load-icon color="#666666" wx:if="{{loading}}"/>
+    <span wx:if="{{loading}}" class="loading-text">加载中...</span>
+    <span wx:else class="loading-text">没有更多了</span>
+  </view>
+</view>

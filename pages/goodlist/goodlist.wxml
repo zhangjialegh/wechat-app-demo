@@ -1,0 +1,19 @@
+<!-- pages/detail.wxml -->
+<view class='container'>
+  <list-view id="listview" bind:datachange="getData" search="providerName" url="{{url}}">
+    <navigator  url="{{'/pages/gooddetail/gooddetail?id='+ item.convenientServiceProviderId}}" class="item" wx:for="{{lists}}" wx:key="{{item.convenientServiceProviderId}}">
+      <view class="img-box">
+        <image src="{{(item.descriptionPicture)}}" mode="scaleToFill"></image>
+      </view>
+      <view class="right">
+        <text class="name">{{item.name}}</text>
+        <star-level score="{{item.avgScore}}" >
+          <text>{{item.avgScore}}分</text>
+        </star-level>
+        <text class="address">{{item.address}}</text>
+      </view>
+    </navigator>
+  </list-view>
+  <!-- loading-page -->
+  <loading-page show="{{isLoading}}" />
+</view>

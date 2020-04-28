@@ -1,0 +1,58 @@
+<!-- index.wxml -->
+<view class="container">
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{background}}" wx:key="*this">
+      <swiper-item>
+        <image src="{{item}}" mode="scaleToFill"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="section">
+    <view class="grid-title">市场服务</view>
+    <view class="grid-box">
+      <button plain class="grid-item" hover-class='button-hover-class' bindtap="goCardDetail">
+        <view class="left">
+          <text class="strong">开锁、换锁</text>
+          <text class="text">开锁、换锁</text>
+        </view>
+        <view class="right">
+          <image class="" src="/assets/image/lockServe.png" mode="aspectFit" lazy-load="false" binderror="" bindload="">
+          </image>
+        </view>
+      </button>
+      <button plain class="grid-item" hover-class='button-hover-class'>
+        <view class="left">
+          <text class="strong">开锁、换锁</text>
+          <text class="text">开锁、换锁</text>
+        </view>
+        <view class="right">
+          <image class="" src="/assets/image/lockServe.png" mode="aspectFit" lazy-load="false" binderror="" bindload="">
+          </image>
+        </view>
+      </button>
+      <button plain class="grid-item" hover-class='button-hover-class'>
+        <view class="left">
+          <text class="strong">开锁、换锁</text>
+          <text class="text">开锁、换锁</text>
+        </view>
+        <view class="right">
+          <image class="" src="/assets/image/lockServe.png" mode="aspectFit" lazy-load="false" binderror="" bindload="">
+          </image>
+        </view>
+      </button>
+      <button plain class="grid-item" hover-class='button-hover-class'>
+        <view class="left">
+          <text class="strong">开锁、换锁</text>
+          <text class="text">开锁、换锁</text>
+        </view>
+        <view class="right">
+          <image class="" src="/assets/image/lockServe.png" mode="aspectFit" lazy-load="false" binderror="" bindload="">
+          </image>
+        </view>
+      </button>
+    </view>
+  </view>
+  <button data-id="{{item.id}}" wx:for="{{cardLists}}" wx:key="{{item.name+index}}" bindtap='goCardDetail' plain class='record-item' bindlongtap='handleMoreOpt' hover-class='button-hover-class'></button>
+  <!-- loading-page -->
+  <!-- <loading-page show="{{isLoading}}" /> -->
+</view>

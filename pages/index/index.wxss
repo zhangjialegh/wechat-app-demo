@@ -1,0 +1,50 @@
+/**index.wxss**/
+swiper {
+  height: 200px;
+}
+image {
+  width: 100%;
+}
+.section .grid-title {
+  padding: 8rpx 0;
+  font-family: PingFangSC-Medium;
+  font-size: 30rpx;
+  color: #333;
+}
+.section .grid-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.section .grid-box .grid-item {
+  width: 48%;
+  height: 140rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8f9fb;
+  margin: 10rpx 0;
+}
+.section .grid-box .grid-item .left .strong {
+  font-family: PingFangSC-Medium;
+  font-size: 28rpx;
+  color: #1e2936;
+  text-align: left;
+  display: block;
+}
+.section .grid-box .grid-item .left .text {
+  font-family: PingFangSC-Medium;
+  font-size: 24rpx;
+  color: #8990a3;
+  text-align: left;
+  display: block;
+}
+.section .grid-box .grid-item .right {
+  height: 100%;
+  width: 50px;
+}
+
+.section .grid-box .grid-item .right image {
+  height: 100%;
+}

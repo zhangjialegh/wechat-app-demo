@@ -1,0 +1,105 @@
+<!-- pages/detail.wxml -->
+<view class='container'>
+  <view class="section">
+    <view class="detail-wrap">
+      <view class="div title-detail" wx:if="{{businessInfoDetail && businessInfoDetail.provider}}">
+        <view class="div title red-starts-cont">
+          <view class="h3">{{businessInfoDetail.provider.name}}</view>
+          <star-level score="{{businessInfoDetail.provider.avgScore}}">
+            <text class="span">{{businessInfoDetail.provider.avgScore}}分</text>
+          </star-level>
+        </view>
+        <view class="div detail">{{businessInfoDetail.provider.description}}</view>
+        <view class="div address">
+          <text class="span icon gray-location"></text>
+          <text class="span name ov-text">{{businessInfoDetail.provider.address}}</text>
+          <image class="blue-phone" src="/assets/image/servePhone.png" mode="aspectFit" lazy-load="false" bindtap="callPhone" />
+        </view>
+      </view>
+
+      <!-- 服务类型 -->
+      <view class="div service-type" wx:if="{{businessInfoDetail && businessInfoDetail.types && businessInfoDetail.types.length!==0}}">
+        <view class="div teb-area">
+          <text class="span icon convenience-type"></text>
+          <text class="span title">{{tabNames.tabOneName}}</text>
+          <text class="span remarks">(选择服务类型)</text>
+        </view>
+        <view class="div servie-img" style="background-image:url('{{backgroundImage || '/assets/image/smart-lock.png'}}')"></view>
+        <view class="div types cl">
+          <view class="div {{serviceTypeId==item.convenientServiceTypeId ? 'choosed' : ''}}"
+            wx:for="{{businessInfoDetail.types}}" wx:key="{{index}}"
+            data-item="{{item}}"
+            bindtap="reFreshChargeStandard">
+            <view class="div card">
+              <view class="div">
+                <text class="span title">{{item.name}}</text>
+                <br />
+                <text class="span price"><span>￥</span>{{item.priceAbout}}{{item.priceUnit}} </text>
+                <text class="span check"><text class="span icon convenience-tyep-choosed"></text></text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <!-- 收费标准 -->
+      <view class="div charges" wx:if="{{tableMap && tableMap.length!=0}}">
+        <view class="div teb-area">
+          <text class="span icon convenience-charge"></text>
+          <text class="span title">{{tabNames.tabTwoName}}</text>
+        </view>
+        <view class="div table-area" wx:for="{{tableMap}}" wx:key="table{{index}}">
+          <view class="h4">{{item.fatherNodeName}}</view>
+          <view class="div list cl" wx:for="{{item.sonNode}}" wx:for-item="value" wx:for-index="i" wx:key="table{{i}}">
+            <view class="p name fl">{{value.name}}</view>
+            <view class="p price ta-r fl">{{value.price}}</view>
+          </view>
+        </view>
+      </view>
+
+      <!-- 优势 -->
+      <view class="div advantage">
+        <view class="div teb-area">
+          <text class="span icon convenience-adv"></text>
+          <text class="span title">{{tabNames.tabThreeName}}</text>
+        </view>
+        <view class="div advantage-image">
+          <image src="/assets/image/advantage-image.png" mode="widthFix" alt="" />
+        </view>
+      </view>
+      <!-- 服务流程 -->
+      <view class="div service-list">
+        <view class="div teb-area">
+          <text class="span icon convenience-service"></text>
+          <text class="span title">{{tabNames.tabFourName}}</text>
+        </view>
+        <view class="div service-image" style="background-image:url('')"></view>
+      </view>
+
+      <!-- 服务人员列表 -->
+      <view class="div services-people" wx:if="{{peopleList.length>0}}">
+        <view class="div teb-area">
+          <text class="span icon convenience-users"></text>
+          <text class="span title">{{tabNames.tabFiveName}}</text>
+        </view>
+        <view class="div list">
+          <view wx:for="{{peopleList}}" wx:for-item="p" wx:for-index="i" wx:key="people{{i}}" class="div cl">
+            <view class="div avator fl">
+              <image src="{{p.src}}" alt="头像" wx:if="{{p.src}}" mode="aspectFit"/>
+              <image src="/assets/image/default-avator.png" mode="aspectFit" alt="头像" wx:else />
+            </view>
+            <view class="div content fl">
+              <view class="h5">{{p.title}}</view>
+              <view class="p"><text class="span" wx:for="{{p.desc}}" wx:for-index="k" wx:for-item="d" wx:key="people{{i}}-{{k}}">{{d}}</text></view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="fix-button"> 
+      <button plain bindtap="placeAnOrder" class="trans-center">下单</button>
+    </view>
+  </view>
+  <!-- loading-page -->
+  <loading-page show="{{isLoading}}" />
+</view>

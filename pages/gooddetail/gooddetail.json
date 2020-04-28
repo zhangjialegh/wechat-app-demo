@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "loading-page": "/components/loadingpage/loadingpage",
+    "list-view": "/components/listview/listview",
+    "star-level": "/components/starlevel/starlevel"
+  },
+  "enablePullDownRefresh": true
+}

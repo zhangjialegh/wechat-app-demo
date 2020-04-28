@@ -1,0 +1,107 @@
+.container .section {
+  background-image: url();
+  background-repeat: no-repeat;
+  background-size: 100%;
+  min-height: 100%;
+}
+.container .h2 {
+  font-size: 23px;
+  color: #fff;
+  letter-spacing: 0;
+  padding-top: 50rpx;
+  padding-bottom: 30rpx;
+}
+.container .sign-box {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 15rpx;
+  overflow: hidden;
+}
+.container .sign-box .sign-tab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .sign-box .sign-tab .tab-item {
+  flex: 1;
+  padding: 30rpx;
+  text-align: center;
+  background: #66a9f2;
+  color: #fff;
+  opacity: .8;
+}
+.container .sign-box .sign-tab .tab-item.selected {
+  color: #666;
+  background: #fff;
+  opacity: 1;
+  border-top-right-radius: 15rpx;
+  border-top-left-radius: 15rpx;
+  overflow: hidden;
+}
+.container .sign-box .sign-body {
+  padding: 30rpx;
+}
+.container .sign-box .sign-body .form .label {
+  font-size: 28rpx;
+  color: #999;
+  padding: 30rpx 0 15rpx;
+}
+.container .sign-box .sign-body .form .input-box {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1rpx solid #eee;
+  padding-top: 15px;
+}
+.container .sign-box .sign-body .form .input-box input {
+  padding: 20rpx 0;
+  font-size: 30rpx;
+  width: 100%;
+}
+.container .sign-box .sign-body .form .input-box .code-btn {
+  border: 1rpx solid #44a1ff;
+  color: #44a1ff;
+  height: 65rpx;
+  width: 200rpx;
+  font-size: 24rpx;
+  line-height: 65rpx;
+}
+.container .sign-box .sign-body .form .input-box .eye-box {
+  width: 100rpx;
+  height: 60rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .sign-box .sign-body .form .input-box .eye-box image {
+  width: 50rpx;
+  height: 100%;
+}
+.container .sign-box .sign-body .form .submit-btn-box {
+  padding: 50rpx 0 30rpx;
+}
+.container .sign-box .sign-body .form .submit-btn-box .submit-btn {
+  height: 90rpx;
+  width: 100%;
+  line-height: 90rpx;
+  background-color: #f3f4f6;
+  font-size: 32rpx;
+  border-radius: 45rpx;
+}
+.container .sign-box .sign-body .btm-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30rpx 0 40rpx;
+}
+.container .sign-box .sign-body .btm-box .text {
+  font-size: 28rpx;
+  color: #999;
+  letter-spacing: .225px;
+}
+.container .sign-box .sign-body .btm-box .navigator {
+  font-size: 30rpx;
+  color: #44a1ff;
+  letter-spacing: .26px;
+}
